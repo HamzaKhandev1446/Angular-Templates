@@ -12,9 +12,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { CodeEditorModule } from '@ngstack/code-editor';
+import { CodeSectionComponent } from './code-section/code-section.component';
+import { ComponentRendererComponent } from './component-renderer/component-renderer.component';
 
 @NgModule({
-  declarations: [TemplateComponentsComponent, LoginFormTemplateComponent],
+  declarations: [
+    TemplateComponentsComponent,
+    LoginFormTemplateComponent,
+    CodeSectionComponent,
+    ComponentRendererComponent,
+  ],
   imports: [
     CommonModule,
     TemplateComponentsRoutingModule,
@@ -26,6 +34,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatButtonModule,
     MatCardModule,
     MatSlideToggleModule,
+    CodeEditorModule.forRoot()
   ],
   exports: [RouterModule],
   providers: [],
