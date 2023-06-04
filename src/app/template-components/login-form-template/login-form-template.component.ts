@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MFValidators } from 'src/app/utils/validators/mf-validators';
 
+
 @Component({
   selector: 'app-login-form-template',
   templateUrl: './login-form-template.component.html',
@@ -12,6 +13,8 @@ export class LoginFormTemplateComponent {
   hide = true;
   invalidCredentialsPassword = false;
   initialized = false;
+
+
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
@@ -53,4 +56,5 @@ export class LoginFormTemplateComponent {
    * @output { none }
    */
   forgotPassword() {}
+
 }

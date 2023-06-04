@@ -28,5 +28,6 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatSlideToggleModule,
   ],
   exports: [RouterModule],
+  providers: [],
 })
 export class TemplateComponentsModule {}
