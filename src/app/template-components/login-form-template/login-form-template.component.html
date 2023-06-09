@@ -1,31 +1,12 @@
-<div class="container login-form-template">
-  <div
-    class="row w-100 d-flex flex-row justify-content-center align-items-center my-3"
-  >
-    <button
-      class="row w-50 d-flex flex-row justify-content-center align-items-center"
-      (click)="changeView(view)"
-    >
-      <ng-container *ngIf="view === 'horizontal-split'">
-        Vertical Split
-        <mat-icon>view_column</mat-icon>
-      </ng-container>
-
-      <ng-container *ngIf="view === 'vertical-split'">
-        Horizontal Split
-        <mat-icon>view_agenda</mat-icon>
-      </ng-container>
-    </button>
-  </div>
-  <div class="row w-100">
+<div
+  class="container login-form-template d-flex flex-column justify-content-start h-100"
+>
+  <div class="row w-100 h-100">
     <div
-      class="d-flex flex-column justify-content-center align-items-center border-right component-view-section"
-      [ngClass]="{
-        'col-lg-6 col-12': view === 'vertical-split',
-        'col-lg-12 col-12': view === 'horizontal-split'
-      }">
+      class="d-flex flex-column justify-content-center align-items-center border-right component-view-section my-5 py-5"
+    >
       <h1 class="text-center">User Login</h1>
-      <!-- <form>
+      <form>
         <div class="mb-3">
           <mat-form-field appearance="outline" class="w-100">
             <mat-label>Email address</mat-label>
@@ -61,19 +42,18 @@
             Sign in with Google
           </button>
         </div>
-      </form> -->
+      </form>
       <p class="text-center">Don't have an account? <a href="#">Sign Up</a></p>
     </div>
     <div
-      class="d-flex flex-column justify-content-center align-items-center code-view-section"
-      [ngClass]="{
-        'col-lg-6 col-12': view === 'vertical-split',
-        'col-lg-12 col-12': view === 'horizontal-split'
-      }"
+      class="d-flex flex-column justify-content-center align-items-center border-right component-view-section my-5 py-5"
     >
       <h1>Code Section</h1>
       <div class="row w-100">
-        <app-code-section [codeModel]="codeModel"></app-code-section>
+        <app-code-section
+          [codeModel]="codeModel"
+          [readOnly]="true"
+        ></app-code-section>
       </div>
     </div>
   </div>
