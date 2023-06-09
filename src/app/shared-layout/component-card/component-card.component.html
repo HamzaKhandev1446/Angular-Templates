@@ -1,0 +1,22 @@
+<div class="row d-flex justify-content-center align-items-center mx-3 my-4">
+  <ng-container *ngFor="let component of components">
+    <figure class="image-block">
+      <h1>{{ component.name }}</h1>
+      <img [src]="component.imagePath" alt="" class="image-block" />
+      <figcaption>
+        <strong><p>Description</p></strong>
+        <p>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+          eleifend leo.
+        </p>
+        <strong><p>Tags</p></strong>
+        <p>{{ component.tags }}</p>
+
+        <button [routerLink]="component.id">View Code</button>
+      </figcaption>
+    </figure>
+  </ng-container>
+</div>
