@@ -1,0 +1,16 @@
+.example-tab-icon {
+  margin-right: 8px;
+}
+.mat-mdc-tab-group {
+  background: #494949;
+}
+
+::ng-deep .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label,
+.mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
+  color: white !important;
+}
+
+::ng-deep .mat-mdc-tab .mdc-tab__text-label,
+.mat-mdc-tab-link .mdc-tab__text-label {
+  color: #a79d9d !important;
+}
