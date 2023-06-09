@@ -1,0 +1,21 @@
+<div
+  class="container login-form-template d-flex flex-column justify-content-start h-100"
+>
+  <div
+    class="row w-100 d-flex flex-row justify-content-center align-items-center my-3"
+  >
+    <h1>+{{ number | phonemask : "show" }}</h1>
+    <h1>+{{ number | phonemask : "hide" }}</h1>
+  </div>
+  <div
+    class="d-flex flex-column justify-content-start align-items-center code-view-section"
+  >
+    <h1>Code Section</h1>
+    <div class="row w-100">
+      <app-code-section
+        [codeModel]="codeModel"
+        [readOnly]="true"
+      ></app-code-section>
+    </div>
+  </div>
+</div>

@@ -15,6 +15,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { CodeEditorModule } from '@ngstack/code-editor';
 import { CodeSectionComponent } from './code-section/code-section.component';
 import { ComponentRendererComponent } from './component-renderer/component-renderer.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { PhoneMaskingDirectiveDemoComponent } from './phone-masking-directive-demo/phone-masking-directive-demo.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { ComponentRendererComponent } from './component-renderer/component-rende
     LoginFormTemplateComponent,
     CodeSectionComponent,
     ComponentRendererComponent,
+    PhoneMaskingDirectiveDemoComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +37,8 @@ import { ComponentRendererComponent } from './component-renderer/component-rende
     MatButtonModule,
     MatCardModule,
     MatSlideToggleModule,
-    CodeEditorModule.forRoot()
+    CodeEditorModule.forRoot(),
+    MatTabsModule,
   ],
   exports: [RouterModule],
   providers: [],

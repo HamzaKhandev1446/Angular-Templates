@@ -1,2 +1,11 @@
-<ngs-code-editor [theme]="theme" [codeModel]="codeModel" [options]="options">
+<app-tab
+  [contents]="contents"
+  (selectedTabChange)="selectedTabChange($event)"
+></app-tab>
+<ngs-code-editor
+  [theme]="theme"
+  [codeModel]="selectedCodeModel"
+  [options]="options"
+  [readOnly]="readOnly"
+>
 </ngs-code-editor>

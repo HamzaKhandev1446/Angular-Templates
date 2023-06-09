@@ -1,0 +1,15 @@
+<mat-tab-group [color]="'#FFFFFF'" (selectedTabChange)="onTabChange($event)">
+  <mat-tab *ngFor="let item of contents">
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">code</mat-icon>
+      {{ item }}
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
+<!-- <ngs-code-editor
+  [theme]="theme"
+  [codeModel]="codeModel"
+  [options]="options"
+  [readOnly]="readOnly"
+>
+</ngs-code-editor> -->
