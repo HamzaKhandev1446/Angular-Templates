@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterContentChecked, Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CodeModel } from '@ngstack/code-editor';
 import { MFValidators } from 'src/app/utils/validators/mf-validators';
@@ -9,7 +9,7 @@ import { loginFormCode } from '../models/loginform.model';
   templateUrl: './login-form-template.component.html',
   styleUrls: ['./login-form-template.component.scss'],
 })
-export class LoginFormTemplateComponent {
+export class LoginFormTemplateComponent implements AfterContentChecked {
   loginForm!: FormGroup;
   hide = true;
   invalidCredentialsPassword = false;
@@ -47,7 +47,7 @@ export class LoginFormTemplateComponent {
    * @output {void}
    */
 
-  ngAfterViewInit(): void {
+  ngAfterContentChecked(): void {
     this.initialized = true;
   }
 

@@ -1,0 +1,104 @@
+#skills{
+  overflow-x: hidden;
+}
+
+.heading-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  margin: 5px 0 5px 0;
+  border-bottom: 5px solid #673ab7;
+  padding-bottom: 8px;
+  width: max-content;
+}
+
+.container{
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.card{
+  display: flex;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  transition: all 0.5s ease-in;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  border: 2px solid #01C6FF;
+  transition: all 0.3s ease-out;
+}
+
+
+.glass{
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.ico{
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+}
+
+
+
+
+@media only screen and (max-width:993px){
+  .card {
+      display: flex;
+      align-items: center;
+      width: 90px;
+      height: 90px;
+    }
+
+  .ico{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+  }
+  .ico-txt{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width:600px){
+  .container{
+    gap: 0.6rem;
+  }
+  .card{
+    width: 80px;
+    height: 80px;
+
+  }
+  .ico{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+  }
+  .ico-txt{
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width:300px){
+  .container{
+    padding: 0;
+    margin: 0;
+  }
+}

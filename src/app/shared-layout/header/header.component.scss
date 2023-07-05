@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Roboto:wght@400;700;900&display=swap');
+
+
+/* container which holds all 3 sections together. */
+.container-fluid {
+  margin-top: 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* section -1 */
+.im-not-a-wrapper {
+  margin-right: 10px;
+}
+
+.navbar-brand {
+  color: black;
+}
+
+.zuiii-animation {
+  position: relative;
+  bottom: 0;
+  /* font-family: 'Fraunces', serif; */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  transition-property: all;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+
+.zuiii-animation:hover {
+  bottom: 5px;
+  color: #01C6FF;
+  transition-property: all;
+  transition-duration: 0.15s;
+  animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+
+/* section-2 */
+
+li a {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #c0c0c0;
+  transition: all 0.3s ease-in;
+}
+
+li .active {
+  border-bottom: 4px solid #01C6FF;
+  padding-bottom: 4px;
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s ease-out;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  color: black;
+}
+
+.nav-link:focus {
+  color: #01C6FF;
+  font-weight: 500;
+}
+
+.navbar-collapse {
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-nav {
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/* section-3 */
+/* 2nd div in whole html file is selected */
+div:nth-child(2){
+  margin-left: auto;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 5px;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  transition: all 2s ease-out;
+}
+
+.nav-icon:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  transition: all 0.1s ease-in;
+}
+
+
+.switcher {
+  display: flex;
+  align-items: center;
+  border-radius: 20%;
+  padding: 4px;
+}
+
+.switcher:hover{
+  padding: 1px;
+  border: 3px solid slategray;
+}
+
+.special {
+  height: 30px;
+  width: 30px;
+}
+
+.hidden1 {
+  display: block;
+}
+
+.hidden2{
+  display: none;
+}
+
+.special-down-nav{
+  display: none;
+}
+
+
+/* mobile and tab media queries */
+@media only screen and (max-width:992px){
+  .container-fluid{
+    width: 95%;
+  }
+
+  .navbar-nav {
+    padding: 0% 5% 0% 5%;
+    flex-direction: column;
+  }
+
+  ul{
+    padding-top: 5%;
+  }
+
+  li .active {
+  padding-left: 10px;
+  margin-left: -10px;
+  font-weight: bold;
+  border-bottom: 2px solid #01C6FF;
+  border-left: 2px solid #01C6FF;
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.1s ease-out;
+  display: inline-block;
+}
+
+  .hidey{
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width:600px){
+  .container-fluid {
+      width: 98%;
+    }
+
+  .icons{
+    gap: 0.4rem;
+    padding: 0;
+  }
+
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .hidden1 {
+      display: none;
+    }
+
+    .hidden2 {
+      display: block;
+    }
+
+  .zuiii-animation{
+    font-size: 1.1rem;
+  }
+
+  .special-down-nav{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    background-color: white;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    filter: drop-shadow(0 1mm 1mm black);
+    /* will remove the drop shodow later as it is a bit weird when navbar doesnt have a dropshadow */
+  }
+
+  .nav-link-X{
+    transform: translateY(12px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0%;
+    transition: all 0.2s ease-in;
+  }
+
+
+  .bottom-nav-icons{
+    width: 32px;
+    border: 1px solid black;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: all .5s ease-in;
+  }
+
+  .bottom-nav-icons:focus, .active{
+    filter: grayscale(0);
+    transition: all .5s ease-out;
+    border: 0;
+  }
+
+  a .bottom-nav-txt{
+    color: black;
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+
+  /* .bottom-nav-icons:focus{
+    filter: invert(100%);
+  } */
+  /* need to work on this. */
+
+}

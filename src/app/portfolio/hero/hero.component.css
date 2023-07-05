@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@300;400&display=swap');
+
+.container{
+  overflow-x: hidden;
+  padding: 5% 1%;
+}
+
+.hero-heading{
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-bottom: 1%;
+}
+
+.typewriter{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 3rem;
+  max-width: 33rem;
+  font-family: 'Montserrat',sans-serif;
+  padding: 5% 0;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.colored-txt{
+  color: #01C6FF;
+}
+
+.about-link{
+  text-decoration: none;
+  color: #01C6FF;
+  font-size: smaller;
+  cursor: pointer;
+}
+
+.wave-hand{
+  animation-name: wave-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+  0% {transform: rotate(0.0deg)}
+  10% {transform: rotate(14.0deg)}
+  30% {transform: rotate(14.0deg)}
+  40% {transform: rotate(-4.0deg)}
+  50% {transform: rotate(10.0deg)}
+  60% {transform: rotate(0.0deg)}
+  100% {transform: rotate(0.0deg)}
+}
+
+.intro-bio{
+  justify-content: center;
+  line-height: 3rem;
+  font-size: 1.4rem;
+  font-family: sans-serif;
+  font-weight: normal;
+  opacity: 0.8;
+  margin-bottom: 5%;
+}
+
+.buttons {
+  margin-top: 5%;
+
+}
+.grad{
+  background: linear-gradient(to right, #673ab7, #01C6FF); /* sticking with this choice for now */
+  /* background: linear-gradient(to right, #01C6FF, #673ab7); */
+}
+
+.special-effect-1{
+  color: black;
+  transition: 0.5s ease-in;
+}
+
+.special-effect-1:hover{
+  width: max-content;
+  color: #01C6FF;
+  filter: drop-shadow(0 0 15px #01C6FF);
+  transition: 0.5s ease-out;
+}
+
+
+.btn{
+  padding: 0.5rem 1rem;
+  text-align: center;
+  align-items: center;
+  color: white;
+  background-color: #673ab7;
+  margin-right: 5%;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 5%;
+  transition: all 0.5s ease-in;
+}
+
+.btn:hover {
+  transform: translate3D(0, -1px, 0) scale(1.05);
+  transition: all 0.2s ease-out;
+  border: 1px solid #673ab7;
+  color: white;
+}
+
+.ico{
+  font-size: 25px;
+  padding-right: 10px;
+}
+
+.profile-picture{
+  margin: 5% 1%;
+  margin-left: 5%;
+  border-radius: 50%;
+  height: 50%;
+  width: 50%;
+  border: 2px solid #673A93;
+  box-shadow: rgba(17, 17, 26, 0.2) 0px 8px 24px,
+  rgba(17, 17, 26, 0.1) 0px 16px 56px,
+  rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.hero-img{
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width:1200px) {
+  .typewriter {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width:993px) {
+  /* .typewriter {
+    font-size: 2.5rem;
+  } */
+
+  .hero-heading{
+    text-align: center;
+  }
+  .text-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .typewriter, .intro-bio{
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+@media screen and (max-width:600px) {
+  .text-wrapper {
+    font-size: 1rem;
+    padding: 0 5%;
+  }
+
+  .typewriter{
+    text-align: center;
+  }
+
+  .hero-heading{
+    text-align: center;
+  }
+
+  .intro-bio{
+    font-size: 1rem;
+    line-height: 2;
+  }
+  .buttons{
+    text-align: center;
+    padding-top: 5%;
+  }
+}

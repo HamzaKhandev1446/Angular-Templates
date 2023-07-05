@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { AuthService } from '../auth/auth.service';
 
 
 
@@ -29,6 +30,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
     MatButtonModule,
     MatCardModule,
   ],
+  providers: [AuthService],
   exports: [RouterModule],
 })
 export class LoginModule { }

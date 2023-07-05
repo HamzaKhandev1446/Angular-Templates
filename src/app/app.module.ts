@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthService } from './auth/auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedLayoutModule } from './shared-layout/shared-layout.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,8 @@ import { AppComponent } from './app.component';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
+    HttpClientModule,
+    SharedLayoutModule,
     CodeEditorModule.forRoot()
   ],
   providers: [],
