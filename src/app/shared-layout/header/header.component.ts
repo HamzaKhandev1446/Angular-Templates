@@ -11,5 +11,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  goToLink(url: string){
+    window.open(url, "_blank");
+}
 
 }

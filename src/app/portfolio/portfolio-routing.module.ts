@@ -28,7 +28,6 @@ const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'resume', component: ResumeComponent },
-  { path: '**', component: PnfComponent},
 ];
 
 @NgModule({
