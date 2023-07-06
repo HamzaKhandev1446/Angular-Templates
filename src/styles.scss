@@ -1,29 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 /* You can add global styles to this file, and also import other style files */
-body{
+body {
   margin: 0;
   padding: 0;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background: #effbfe;
   /* background: #fbf9ff ; */
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: #8de6ff;
   /* background: #d1bfee; */
 }
 
-::-webkit-scrollbar-thumb:hover{
-  background: #01C6FF;
+::-webkit-scrollbar-thumb:hover {
+  background: #01c6ff;
   /* background: #673ab7; */
 }
+// pointer cursor show any element
+.pointer-cursor {
+  cursor: url(assets/svg/ico-cursor-pointer.svg), pointer !important;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.not-allowed {
+  cursor: not-allowed !important;
+  opacity: 0.6;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

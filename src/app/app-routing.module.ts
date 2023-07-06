@@ -6,15 +6,15 @@ import { TemplateComponentsModule } from './template-components/template-compone
 // import { AuthGuard } from './libs/ui/middlewares/AuthGuard/auth-guard.service';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   loadChildren: () =>
-  //     import('./login/login.module').then((mod) => mod.LoginModule),
-  // },
   {
     path: '',
     loadChildren: () =>
       import('./portfolio/portfolio.module').then((mod) => mod.PortfolioModule),
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./login/login.module').then((mod) => mod.LoginModule),
   },
   {
     path: 'components',
