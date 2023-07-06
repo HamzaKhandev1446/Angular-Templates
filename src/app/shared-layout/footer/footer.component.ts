@@ -14,4 +14,7 @@ export class FooterComponent implements OnInit {
     // this.language=this.languageList.find((f: { code: string | undefined; })=>f.code===this.locale).name;
   }
 
+  goToLink(url: string){
+    window.open(url, "_blank");
+}
 }
