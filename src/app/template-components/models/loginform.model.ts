@@ -173,7 +173,7 @@ export const loginFormCode = [
               </button>
             </div>
             <div class="col-6">
-              <a href="#" class="btn btn-link">Forgot password?</a>
+              <a  class="btn btn-link">Forgot password?</a>
             </div>
           </div>
 
@@ -189,7 +189,7 @@ export const loginFormCode = [
             </button>
           </div>
         </form>
-        <p class="text-center">Don't have an account? <a href="#">Sign Up</a></p>
+        <p class="text-center">Don't have an account? <a >Sign Up</a></p>
       </div>
 
     </div>

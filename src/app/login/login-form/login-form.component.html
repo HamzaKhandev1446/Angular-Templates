@@ -1,7 +1,15 @@
 <div
   class="container h-100 d-flex flex-column justify-content-center align-items-center"
 >
+<ng-container *ngIf="isLoginMode">
   <h1 class="text-center">User Login</h1>
+</ng-container>
+
+
+<ng-container *ngIf="!isLoginMode">
+  <h1 class="text-center">User Signup</h1>
+</ng-container>
+
   <form [formGroup]="authForm">
     <div class="mb-3">
       <mat-form-field appearance="outline" class="w-100">
@@ -42,19 +50,31 @@
       >
         Sign In
       </button>
-      <a href="#" class="btn btn-link w-50">Forgot password?</a>
+      <a class="btn btn-link w-50">Forgot password?</a>
     </div>
     <p class="text-center">Or sign in with:</p>
     <div class="mb-3 text-center">
-      <button mat-raised-button color="primary">
+      <button mat-raised-button color="primary" disabled="true">
         <mat-icon>facebook</mat-icon>
         Sign in with Facebook
       </button>
-      <button mat-raised-button color="warn">
+      <button mat-raised-button color="warn" disabled="true">
         <mat-icon>google</mat-icon>
         Sign in with Google
       </button>
     </div>
   </form>
-  <p class="text-center">Don't have an account? <a href="#">Sign Up</a></p>
+  <ng-container *ngIf="isLoginMode">
+    <p class="text-center">
+      Don't have an account?
+      <a class="btn btn-link w-50" (click)="onSwitchMode()">Sign Up</a>
+    </p>
+  </ng-container>
+
+  <ng-container *ngIf="!isLoginMode">
+    <p class="text-center">
+      Already have an account?
+      <a class="btn btn-link w-50" (click)="onSwitchMode()">Login</a>
+    </p>
+  </ng-container>
 </div>
